@@ -7,10 +7,10 @@ Este plugin permite solicitar permisos de aperatura en segundo plano para dispos
 ### Paso 1: Instalar el paquete del plugin
 
 ```bash
-npm install &lt;ruta-del-plugin-local&gt;
+npm install 'dev/user/capacitor-mui-permission'
 ```
 
-Reemplace &lt;ruta-del-plugin-local&gt; con la ruta local del directorio del plugin en su sistema.
+Reemplace 'ruta-del-plugin-local&gt; con la ruta local del directorio del plugin en su sistema.
 
 ### Paso 2: Sincronizar el plugin con su proyecto Capacitor
 
@@ -23,9 +23,9 @@ npx cap sync
 Importe y utilice el plugin en su proyecto de la siguiente manera:
 
 ```typescript
-import { CapacitorMiuiPermission } from '&lt;nombre-del-plugin&gt;';
+import { CapacitorMiuiPermission } from 'capacitor-mui-permission';
 
-// Reemplaza &lt;nombre-del-plugin&gt; con el nombre del plugin que has creado (por ejemplo, `capacitor-miui-permission`)
+// Reemplaza &lt;capacitor-mui-permission&gt; con el nombre del plugin que has creado (por ejemplo, `capacitor-miui-permission`)
 
 async function requestMIUIPermission() {
   try {
