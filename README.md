@@ -1,55 +1,69 @@
-# Capacitor MIUI Permission Plugin
+# capacitor-voip-ios
 
-Este plugin permite solicitar permisos de aperatura en segundo plano para dispositivos Xiaomi que ejecutan MIUI.
+Capacito Pluging VoiP Ios CallKit
 
-## Instalación
-
-### Paso 1: Instalar el paquete del plugin
+## Install
 
 ```bash
-npm install 'dev/user/capacitor-mui-permission'
-```
-
-Reemplace 'ruta-del-plugin-local&gt; con la ruta local del directorio del plugin en su sistema.
-
-### Paso 2: Sincronizar el plugin con su proyecto Capacitor
-
-```bash
+npm install capacitor-voip-ios
 npx cap sync
 ```
 
-## Uso
+## API
 
-Importe y utilice el plugin en su proyecto de la siguiente manera:
+<docgen-index>
+
+* [`requestMIUIPopupPermission()`](#requestmiuipopuppermission)
+* [`checkMIUIPermission(...)`](#checkmiuipermission)
+* [`canDrawOverlays()`](#candrawoverlays)
+* [`requestOverlayPermission()`](#requestoverlaypermission)
+
+</docgen-index>
+
+<docgen-api>
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### requestMIUIPopupPermission()
 
 ```typescript
-import { CapacitorMiuiPermission } from 'capacitor-mui-permission';
-
-// Reemplaza &lt;capacitor-mui-permission&gt; con el nombre del plugin que has creado (por ejemplo, `capacitor-miui-permission`)
-
-async function requestMIUIPermission() {
-  try {
-    await CapacitorMiuiPermission.requestMIUIPopupPermission();
-    console.log('MIUI permission requested successfully');
-  } catch (error) {
-    console.error('Error requesting MIUI permission', error);
-  }
-}
-
-// Llama a la función requestMIUIPermission() en el lugar apropiado de tu aplicación
+requestMIUIPopupPermission() => Promise<void>
 ```
 
-## Ejecutar en Android
+--------------------
 
-Ejecute su proyecto Capacitor en Android utilizando el siguiente comando:
 
-```bash
-npx cap run android
+### checkMIUIPermission(...)
+
+```typescript
+checkMIUIPermission(options: { permission: string; }) => Promise<{ granted: boolean; }>
 ```
 
-Esto abrirá Android Studio con su proyecto. Desde allí, podrá ejecutar su aplicación en un dispositivo o emulador Android.
+| Param         | Type                                 |
+| ------------- | ------------------------------------ |
+| **`options`** | <code>{ permission: string; }</code> |
 
-## Licencia
+**Returns:** <code>Promise&lt;{ granted: boolean; }&gt;</code>
 
-MIT
+--------------------
+
+
+### canDrawOverlays()
+
+```typescript
+canDrawOverlays() => Promise<{ value: boolean; }>
 ```
+
+**Returns:** <code>Promise&lt;{ value: boolean; }&gt;</code>
+
+--------------------
+
+
+### requestOverlayPermission()
+
+```typescript
+requestOverlayPermission() => Promise<void>
+```
+
+--------------------
+
+</docgen-api>
