@@ -13,8 +13,21 @@ export class CapacitorMiuiPermissionWeb
   }
 
   async requestMIUIPopupPermission(): Promise<void> {
-    throw new Error(
-      'CapacitorMiuiPermission is not supported on the web platform',
-    );
+    throw new Error('Not available on the web');
+  }
+
+  async checkMIUIPermission(options: {
+    permission: string;
+  }): Promise<{ granted: boolean }> {
+    console.warn('checkMIUIPermission is not supported on the web.', options);
+    return { granted: false };
+  }
+
+  async canDrawOverlays(): Promise<{ value: boolean }> {
+    return { value: false };
+  }
+
+  async requestOverlayPermission(): Promise<void> {
+    throw new Error('Not available on the web');
   }
 }
