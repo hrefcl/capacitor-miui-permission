@@ -1,0 +1,61 @@
+{
+  "api": {
+    "name": "CapacitorMiuiPermissionPlugin",
+    "slug": "capacitormiuipermissionplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "requestMIUIPopupPermission",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "requestmiuipopuppermission"
+      },
+      {
+        "name": "checkMIUIPermission",
+        "signature": "(options: { permission: string; }) => Promise<{ granted: boolean; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ permission: string; }"
+          }
+        ],
+        "returns": "Promise<{ granted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "checkmiuipermission"
+      },
+      {
+        "name": "canDrawOverlays",
+        "signature": "() => Promise<{ value: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ value: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "candrawoverlays"
+      },
+      {
+        "name": "requestOverlayPermission",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "requestoverlaypermission"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
