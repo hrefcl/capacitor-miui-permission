@@ -1,4 +1,6 @@
-## Capacitor MIUI Permission Plugin
+# Capacitor MiUI Permission Plugin
+
+
 Este plugin para Capacitor permite manejar y verificar permisos específicos de MIUI en dispositivos Xiaomi con la capa de personalización MIUI. La utilidad de este plugin radica en la capacidad de verificar y solicitar permisos que no se encuentran disponibles en la API estándar de Android.
 
 ### Características
