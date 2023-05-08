@@ -1,9 +1,12 @@
 var capacitorCapacitorMiuiPermission = (function (exports, core) {
     'use strict';
 
-    const CapacitorMiuiPermission = core.registerPlugin('CapacitorMiuiPermission', {
-        web: () => Promise.resolve().then(function () { return web; }).then(m => new m.CapacitorMiuiPermissionWeb()),
-    });
+    const isAndroid = core.Capacitor.getPlatform() === 'android';
+    const CapacitorMiuiPermission = isAndroid
+        ? core.registerPlugin('CapacitorMiuiPermission', {
+            web: () => Promise.resolve().then(function () { return web; }).then((m) => new m.CapacitorMiuiPermissionWeb()),
+        })
+        : null;
 
     class CapacitorMiuiPermissionWeb extends core.WebPlugin {
         constructor() {
